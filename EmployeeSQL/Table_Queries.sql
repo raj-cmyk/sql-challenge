@@ -70,11 +70,20 @@ SELECT *
 FROM employee_clean_Qtn4
 WHERE dept_name = 'Sales';
 
-
 --Qtn7List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
 SELECT *
 FROM employee_clean_Qtn4
 WHERE dept_name = 'Sales'OR dept_name = 'Development';
+
+--Qtn8 In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
+SELECT
+last_name,
+COUNT(last_name) 
+FROM employees 
+GROUP BY last_name 
+ORDER BY COUNT DESC;
+
+
 
 
 
